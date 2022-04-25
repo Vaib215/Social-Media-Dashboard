@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Social Media Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 
+
+  Dark Mode
+
+  
+
+  @nathanf
+  1987
+  Followers
+  12 Today
+
+  @nathanf
+  1044
+  Followers
+  99 Today
+
+  @realnathanf
+  11k
+  Followers
+  1099 Today
+
+  Nathan F.
+  8239
+  Subscribers
+  144 Today
+
+
+
+  Overview - Today
+
+  Page Views
+  87
+  3%
+
+  Likes
+  52
+  2%
+
+  Likes
+  5462
+  2257%
+
+  Profile Views
+  52k
+  1375%
+
+  Retweets
+  117
+  303%
+
+  Likes
+  507
+  553%
+
+  Likes
+  107
+  19%
+
+  Total Views
+  1407
+  12%
+
+   -->
+    <div class="container">
+      <div class="shade"></div>
+      <header>
+        <div class="left-head">
+          <h1>Social Media Dashboard</h1>
+          <p>Total Followers: 23,004</p>
+        </div>
+        <div class="right-head">
+          <p>Dark Mode</p>
+          <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox" checked="true" />
+              <div class="slider round"></div>
+            </label>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="main-stats">
+          <div class="card">
+            <div class="strip" style="background-color:var(--clr-fb);"></div>
+            <div class="logo df">
+              <img src="./images/icon-facebook.svg" alt="" />
+              <p>@nathanf</p>
+            </div>
+            <h1>1987</h1>
+            <p class="foll">FOLLOWERS</p>
+            <div class="change">
+              <img src="./images/icon-up.svg" alt="" />
+              <p>12 Today</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="strip" style="background-color:var(--clr-twi);"></div>
+            <div class="logo df">
+              <img src="./images/icon-twitter.svg" alt="" />
+              <p>@nathanf</p>
+            </div>
+            <h1>1044</h1>
+            <p class="foll">FOLLOWERS</p>
+            <div class="change">
+              <img src="./images/icon-up.svg" alt="" />
+              <p>99 Today</p>
+            </div>
+          </div>
+          <div class="card">
+            <div
+              class="strip"
+              style="background:linear-gradient(90deg,var(--clr-ig-start),var(--clr-ig-end));"
+            ></div>
+            <div class="logo df">
+              <img src="./images/icon-instagram.svg" alt="" />
+              <p>@nathanf</p>
+            </div>
+            <h1>11k</h1>
+            <p class="foll">FOLLOWERS</p>
+            <div class="change">
+              <img src="./images/icon-up.svg" alt="" />
+              <p>1099 Today</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="strip" style="background-color:var(--clr-yt);"></div>
+            <div class="logo df">
+              <img src="./images/icon-youtube.svg" alt="" />
+              <p>@nathanf</p>
+            </div>
+            <h1>8239</h1>
+            <p class="foll">SUBSCRIBERS</p>
+            <div class="change">
+              <img src="./images/icon-down.svg" alt="" />
+              <p style="color: var(--clr-brightr)">144 Today</p>
+            </div>
+          </div>
+        </div>
+        <h2 class="ot">Overview Today</h2>
+        <div class="overview-stats df">
+          <div class="minicard">
+            <div class="left">
+              <p>Page views</p>
+              <h1>87</h1>
+            </div>
+            <div class="right">
+              <img src="./images/icon-facebook.svg" alt="" />
+              <span>
+                <img src="./images/icon-up.svg" alt="" />
+                <p>3%</p>
+              </span>
+            </div>
+          </div>
+          <div class="minicard">
+            <div class="left">
+              <p>Likes</p>
+              <h1>52</h1>
+            </div>
+            <div class="right">
+              <img src="./images/icon-facebook.svg" alt="" />
+              <span>
+                <img src="./images/icon-down.svg" alt="" />
+                <p style="color: var(--clr-brightr)">2%</p>
+              </span>
+            </div>
+          </div>
+          <div class="minicard">
+              <div class="left">
+                <p>Likes</p>
+                <h1>5462</h1>
+              </div>
+              <div class="right">
+                <img src="./images/icon-instagram.svg" alt="" />
+                <span>
+                  <img src="./images/icon-up.svg" alt="" />
+                  <p>2257%</p>
+                </span>
+              </div>
+            </div>
+          <div class="minicard">
+            <div class="left">
+              <p>Profile views</p>
+              <h1>52k</h1>
+            </div>
+            <div class="right">
+              <img src="./images/icon-instagram.svg" alt="" />
+              <span>
+                <img src="./images/icon-up.svg" alt="" />
+                <p>1375%</p>
+              </span>
+            </div>
+          </div>
+          
+          <div class="minicard">
+            <div class="left">
+              <p>Retweets</p>
+              <h1>117</h1>
+            </div>
+            <div class="right">
+              <img src="./images/icon-twitter.svg" alt="" />
+              <span>
+                <img src="./images/icon-up.svg" alt="" />
+                <p>303%</p>
+              </span>
+            </div>
+          </div>
+          <div class="minicard">
+            <div class="left">
+              <p>Likes</p>
+              <h1>507</h1>
+            </div>
+            <div class="right">
+              <img src="./images/icon-twitter.svg" alt="" />
+              <span>
+                <img src="./images/icon-up.svg" alt="" />
+                <p>553%</p>
+              </span>
+            </div>
+          </div>
+          <div class="minicard">
+            <div class="left">
+              <p>Likes</p>
+              <h1>107</h1>
+            </div>
+            <div class="right">
+              <img src="./images/icon-youtube.svg" alt="" />
+              <span>
+                <img src="./images/icon-down.svg" alt="" />
+                <p style="color: var(--clr-brightr)">19%</p>
+              </span>
+            </div>
+          </div>
+          <div class="minicard">
+            <div class="left">
+              <p>Total views</p>
+              <h1>1407</h1>
+            </div>
+            <div class="right">
+              <img src="./images/icon-youtube.svg" alt="" />
+              <span>
+                <img src="./images/icon-down.svg" alt="" />
+                <p style="color: var(--clr-brightr)">12%</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  /* Primary Colors */
+  --clr-limeg: hsl(163, 72%, 41%);
+  --clr-brightr: hsl(356, 69%, 56%);
+  --clr-fb: hsl(208, 92%, 53%);
+  --clr-twi: hsl(203, 89%, 53%);
+  --clr-ig-start: hsl(37, 97%, 70%);
+  --clr-ig-end: hsl(329, 70%, 58%);
+  --clr-yt: hsl(348, 97%, 39%);
+  --clr-bg: hsl(0, 0%, 100%);
+  --clr-top-bg-pattern: hsl(225, 100%, 98%);
+  --clr-card-bg: hsl(227, 47%, 96%);
+  --clr-text: hsl(228, 12%, 44%);
+  --clr-head: hsl(230, 17%, 14%);
+  --clr-slider: #fff;
+}
+
+[data-theme="dark"] {
+  --clr-bg: hsl(230, 17%, 14%);
+  --clr-top-bg-pattern: hsl(232, 19%, 15%);
+  --clr-card-bg: hsl(228, 28%, 20%);
+  --clr-text: hsl(228, 34%, 66%);
+  --clr-head: hsl(0, 0%, 100%);
+  --clr-slider: hsl(210, 70%, 15%);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  background-color: var(--clr-bg);
+  max-width: 100%;
+}
+
+.container {
+  max-width: 80%;
+  margin: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  z-index: 1;
+}
+
+.shade {
+  height: 40vh;
+  width: 100vw;
+  background-color: var(--clr-top-bg-pattern);
+  position: absolute;
+  top: 0%;
+  right: 0;
+  z-index: -1;
+}
+
+.theme-switch-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: var(--clr-slider);
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background: #aeb3cb;
+}
+
+:not(input:checked) + .slider {
+  background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background: linear-gradient(90deg, #378fe6, #3eda82);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+          transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.df {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.left-head h1 {
+  color: var(--clr-head);
+}
+
+.left-head p {
+  color: var(--clr-text);
+  font-weight: 700;
+}
+
+.right-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right-head p {
+  padding-right: 1em;
+  color: var(--clr-text);
+  font-weight: 700;
+}
+
+main {
+  margin-top: 3em;
+}
+
+.main-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+@media (max-width: 600px) {
+  .main-stats {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.card {
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--clr-card-bg);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+
+.card .strip {
+  width: 100%;
+  height: 0.5ch;
+}
+
+.card .logo {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+}
+
+.card .logo p {
+  color: var(--clr-text);
+  font-weight: 700;
+  margin-left: 1ch;
+}
+
+.card h1 {
+  font-size: 4em;
+  color: var(--clr-head);
+}
+
+.card .foll {
+  letter-spacing: 0.5ch;
+  text-align: center;
+  color: var(--clr-text);
+  font-size: 14px;
+  margin-bottom: 2em;
+}
+
+.card .change {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--clr-limeg);
+  font-weight: 700;
+  margin-bottom: 2.5em;
+}
+
+.card .change p {
+  margin-left: 0.5ch;
+}
+
+.ot {
+  color: var(--clr-text);
+}
+
+.overview-stats {
+  margin-top: 2em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.overview-stats .minicard {
+  background-color: var(--clr-card-bg);
+  margin-bottom: 1.5em;
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 150px;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  border-radius: 6px;
+  padding: 2em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.overview-stats .minicard .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.overview-stats .minicard .left p {
+  margin-bottom: 2em;
+  color: var(--clr-text);
+  font-weight: 700;
+}
+
+.overview-stats .minicard .left h1 {
+  color: var(--clr-head);
+}
+
+.overview-stats .minicard .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.overview-stats .minicard .right span {
+  margin-top: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview-stats .minicard .right span p {
+  color: var(--clr-limeg);
+  margin-left: 0.5ch;
+  font-weight: 700;
+}
+/*# sourceMappingURL=style.css.map */
